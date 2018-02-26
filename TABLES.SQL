@@ -1,3 +1,15 @@
+/*
+	possible inital format of tables and attributes
+*/
+
+
+
+/*
+
+	table to store personal details of candidate
+
+*/
+
 CREATE TABLE Personal_Details (
 applicant_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 pps_no VARCHAR(12) not null,
@@ -17,6 +29,13 @@ mobile INT not null
 
 
 
+/*
+
+	table to store position applied for
+
+*/
+
+
 CREATE TABLE Position (
 reference_number VARCHAR(24),
 position_applied VARCHAR(144),
@@ -25,6 +44,12 @@ FOREIGN KEY fk_personal_details(applicant_id)
    REFERENCES Personal_Details(applicant_id)
 );
 
+
+/*
+
+	table to store current status of candidate
+
+*/
 
 
 CREATE TABLE Current_Status(
@@ -42,6 +67,8 @@ subject_3 VARCHAR(144) null,
 garda_vetted BOOLEAN not null
  
 );
+
+
 
 CREATE TABLE Qualifications();
 CREATE TABLE Other_Qualifications();
